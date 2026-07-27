@@ -5,7 +5,7 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { getProjects, locales, translations, type Locale } from "@/data/i18n";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
-const domains = ["pulse", "panet", "vasya", "lab"];
+const domains = ["pulse", "panet", "lab"];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -70,7 +70,6 @@ export default async function LocalizedHome({ params }: { params: Promise<{ loca
           <div className="core"><span className="core-code">ROOT</span><strong>RL</strong><small>ldiga.com</small></div>
           <div className="satellite satellite-a"><span />PANet</div>
           <div className="satellite satellite-b"><span />Pulse</div>
-          <div className="satellite satellite-c"><span />Vasya</div>
           <div className="satellite satellite-d"><span />Volthash</div>
         </div>
       </section>
@@ -97,7 +96,7 @@ export default async function LocalizedHome({ params }: { params: Promise<{ loca
           <div className="domain-root"><span>ROOT DOMAIN</span><strong>ldiga.com</strong><small>{t.rootIdentity}</small></div>
           <div className="domain-line" />
           <div className="domain-children">
-            {domains.map((domain,index)=><div className="domain-node" key={domain}><span>0{index+1}</span><strong>{domain}.ldiga.com</strong><small>{index===3?t.experiment:t.productNode}</small></div>)}
+            {domains.map((domain,index)=><div className="domain-node" key={domain}><span>0{index+1}</span><strong>{domain}.ldiga.com</strong><small>{domain === "lab" ? t.experiment : t.productNode}</small></div>)}
           </div>
         </div>
       </section>
