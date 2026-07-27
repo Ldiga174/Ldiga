@@ -104,7 +104,14 @@ export default async function LocalizedHome({ params }: { params: Promise<{ loca
 
       <section className="section shell about" id="about">
         <div className="portrait">
-          <Image src="/rodion.jpg" alt="Rodion Lebedev" fill sizes="(max-width: 900px) 100vw, 38vw" />
+          <Image
+            src="/rodion.jpg"
+            alt="Rodion Lebedev"
+            fill
+            priority
+            unoptimized
+            sizes="(max-width: 900px) 100vw, 38vw"
+          />
           <div className="portrait-label"><span>RODION LEBEDEV</span><small>FOUNDER / BUILDER</small></div>
         </div>
         <div className="about-content">
