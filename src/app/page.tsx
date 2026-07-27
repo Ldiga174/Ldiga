@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "@/data/projects";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
@@ -60,9 +61,15 @@ export default function Home() {
       </section>
 
       <section className="section shell about" id="about">
-        <div className="about-card"><span className="section-index">03 / ОБО МНЕ</span><h2>Не просто пишу код.<br /><span>Собираю продукты.</span></h2><p>Мой подход — быстро превращать гипотезу в рабочую систему, проверять её на реальных пользователях и развивать только то, что создаёт ценность. ИИ для меня — не отдельный инструмент, а новый слой инженерии и предпринимательства.</p></div>
-        <div className="stack"><span className="section-index">РАБОЧИЙ СТЕК</span>
-          {[["OpenAI / Codex","AI ENGINEERING"],["Next.js / Vercel","PRODUCT"],["Supabase / PostgreSQL","DATA"],["Ollama / Linux","LOCAL AI"],["GitHub / MCP","AUTOMATION"]].map(([name,group])=><div className="stack-row" key={name}><strong>{name}</strong><span>{group}</span></div>)}
+        <div className="portrait">
+          <Image src="/rodion.jpg" alt="Родион Лебедев" fill sizes="(max-width: 900px) 100vw, 38vw" />
+          <div className="portrait-label"><span>RODION LEBEDEV</span><small>FOUNDER / BUILDER</small></div>
+        </div>
+        <div className="about-content">
+          <div className="about-card"><span className="section-index">03 / ОБО МНЕ</span><h2>Не просто пишу код.<br /><span>Собираю продукты.</span></h2><p>Мой подход — быстро превращать гипотезу в рабочую систему, проверять её на реальных пользователях и развивать только то, что создаёт ценность. ИИ для меня — не отдельный инструмент, а новый слой инженерии и предпринимательства.</p></div>
+          <div className="stack"><span className="section-index">РАБОЧИЙ СТЕК</span>
+            {[["OpenAI / Codex","AI ENGINEERING"],["Next.js / Vercel","PRODUCT"],["Supabase / PostgreSQL","DATA"],["Ollama / Linux","LOCAL AI"],["GitHub / MCP","AUTOMATION"]].map(([name,group])=><div className="stack-row" key={name}><strong>{name}</strong><span>{group}</span></div>)}
+          </div>
         </div>
       </section>
 
