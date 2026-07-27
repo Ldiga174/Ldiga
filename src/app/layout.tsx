@@ -3,12 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase:new URL("https://ldiga.com"),
-  title:"Родион Лебедев — AI Product Builder",
-  description:"Личная цифровая экосистема Родиона Лебедева: ИИ-продукты, агенты, автоматизация и технологические проекты.",
-  openGraph:{title:"Родион Лебедев — AI Product Builder",description:"Создаю ИИ-продукты, агентные системы и автоматизацию — от идеи до работающего продукта.",url:"https://ldiga.com",siteName:"LDIGA",locale:"ru_RU",type:"website"},
-  alternates:{canonical:"/"}
+  title:"Rodion Lebedev — AI Product Builder",
+  description:"Rodion Lebedev’s digital ecosystem: AI products, agents, automation, and technology ventures.",
 };
 
 export default function RootLayout({children}:{children:React.ReactNode}) {
-  return <html lang="ru"><body>{children}</body></html>;
+  return <html lang="en"><body>{children}</body></html>;
 }
