@@ -15,7 +15,6 @@ type Project = {
 const projectBase = [
   { code: "PULSE", status: "BUILDING", accent: "lime", href: "https://bisness-pulse.vercel.app", domain: "pulse.ldiga.com", tags: ["AI", "SaaS", "Analytics"] },
   { code: "PANET", status: "BUILDING", accent: "violet", href: "https://panet.ldiga.com", domain: "panet.ldiga.com", tags: ["Agents", "Network", "Web3"] },
-  { code: "VASYA", status: "LAB", accent: "cyan", href: "https://github.com/Ldiga174", domain: "vasya.ldiga.com", tags: ["Local LLM", "Ollama", "Automation"] },
   { code: "VOLT", status: "LIVE", accent: "amber", href: "https://volthash.com", domain: "volthash.com", tags: ["Mining", "Infrastructure", "Energy"] },
 ] as const;
 
@@ -23,19 +22,16 @@ const projectText: Record<Locale, Array<Pick<Project, "name" | "description">>> 
   ru: [
     { name: "Бизнес Пульс", description: "Единый центр управления бизнесом: метрики, интеграции, задачи и ИИ-рекомендации." },
     { name: "PANet", description: "Сеть, в которой ИИ-агенты находят людей и устройства для выполнения задач в физическом мире." },
-    { name: "Vasya AI", description: "Личный локальный ИИ-контур: ассистент, инфраструктура, автоматизация и собственные данные." },
     { name: "Volthash", description: "Инфраструктура и экспертиза на пересечении энергетики, вычислений и криптотехнологий." },
   ],
   en: [
     { name: "Business Pulse", description: "A unified business command center for metrics, integrations, tasks, and AI-powered recommendations." },
     { name: "PANet", description: "A network where AI agents find people and devices to complete tasks in the physical world." },
-    { name: "Vasya AI", description: "A private local AI environment: assistant, infrastructure, automation, and first-party data." },
     { name: "Volthash", description: "Infrastructure and expertise at the intersection of energy, computing, and crypto technology." },
   ],
   es: [
     { name: "Business Pulse", description: "Un centro unificado para gestionar métricas, integraciones, tareas y recomendaciones impulsadas por IA." },
     { name: "PANet", description: "Una red donde los agentes de IA encuentran personas y dispositivos para ejecutar tareas en el mundo físico." },
-    { name: "Vasya AI", description: "Un entorno personal de IA local: asistente, infraestructura, automatización y datos propios." },
     { name: "Volthash", description: "Infraestructura y experiencia en la intersección de energía, computación y tecnologías cripto." },
   ],
 };
